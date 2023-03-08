@@ -57,3 +57,9 @@ function rpn(expression) {
   const theRpn = new RPN(expression);
   return theRpn.evaluate();
 }
+// boton calculate
+function calcularResultado() {
+  const expression = document.getElementById("val").value;
+  const resultado = rpn(expression);
+  document.getElementById("resultado").textContent = resultado;
+}
