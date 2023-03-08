@@ -57,9 +57,27 @@ function rpn(expression) {
   const theRpn = new RPN(expression);
   return theRpn.evaluate();
 }
+
+// valida si los datos proveidos son validos
+function validate(expression) {
+  if (!/^[0-9+\-*/\s]+$/.test(expression)) {
+    alert("Please insert a valid expression");
+    return false;
+  }
+  if (expression.trim() === "") {
+    alert("Please insert an expression");
+    return false;
+  }
+  return true;
+}
+
+
 // boton calculate
 function calcularResultado() {
   const expression = document.getElementById("val").value;
+  if (!validate(expression)) {
+    return;
+  }
   const resultado = rpn(expression);
   document.getElementById("resultado").textContent = resultado;
 }
