@@ -1,27 +1,52 @@
 body {
+    padding-top: 3vh;
     background-color: #000;
     color: #00ff41;
     text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .container {
     margin: 0 auto;
-    border: 2px solid #fff;
-    width: 50%;
-    height: 300px;
+    border: 2px solid #00ff41;
+    border-radius: 10px;
+    width: 40%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-textarea {
-    width: 50%;
+h1 {
+    font-size: 3vw;
+    padding: 0;
+    margin: 0;
+}
+
+#resultado {
+    font-size: 30px;
 }
 
 button {
-    width: 10vw;
-    height: 5vh;
     background-color: #00ff41;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
+
+button:hover {
+    color: #001F3F;
+    background-color: #fff;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] { -moz-appearance:textfield; }
