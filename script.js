@@ -4,7 +4,7 @@ function rpn(expression) {
     this.data = 0;
     this.stack = [];
     this.operators = ["+", "-", "*", "/"];
-    this.expression = expression.split(" ");
+    this.expression = expression.split(" ");   // not splitting data !!!!! 
     }
 
     push(value) {
