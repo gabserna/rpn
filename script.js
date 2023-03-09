@@ -5,7 +5,13 @@ function rpn(expression) {
     this.stack = [];
     this.operators = ["+", "-", "*", "/"];
     this.expression = expression.split(" ");   // not splitting data !!!!! 
-    }
+
+    /*
+    this.expression = expression.split(/(\+|\-|\*|\/|\s)/)  // split by operators and spaces
+    .filter(token => token !== "")  // remove empty tokens
+    */
+
+  }
 
     push(value) {
     this.stack[this.data] = value;
