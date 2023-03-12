@@ -4,12 +4,11 @@ function rpn(expression) {
     this.data = 0;
     this.stack = [];
     this.operators = ["+", "-", "*", "/"];
-    this.expression = expression.split(" ");   // not splitting data !!!!! 
+    this.expression = expression.split(" ");   // splitting input
 
-    /*
-    this.expression = expression.split(/(\+|\-|\*|\/|\s)/)  // split by operators and spaces
-    .filter(token => token !== "")  // remove empty tokens
-    */
+    //this.expression = expression.match(/[^\s]+/g);
+    //this.expression = expression.split(/(\+|\-|\*|\/|\s)/)  // split by operators and spaces
+    //.filter(token => token !== "")  // remove empty tokens
 
   }
 
